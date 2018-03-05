@@ -2,4 +2,12 @@ body {
     background: #F4F1DE;
     font-family: 'Open Sans', sans-serif;
     color: #3D405B;
+    margin-top: 2%;
+}
+
+input[type=text] {
+    border: 2.5px solid #3D405B;
+    border-radius: 4px;
+    height: 40px;
+    margin: 1% 1%;
 }
