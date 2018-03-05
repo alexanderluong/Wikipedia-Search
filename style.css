@@ -1,13 +1,18 @@
 body {
-    background: #F4F1DE;
-    font-family: 'Open Sans', sans-serif;
-    color: #3D405B;
+    background: #FFFEFC;
+    color: 131B23;
     margin-top: 2%;
 }
 
+h1 {
+    font-family: 'Arvo', serif;
+    margin-top: 3%;
+}
+
 input[type=text] {
-    border: 2.5px solid #3D405B;
-    border-radius: 4px;
+    border: 2.5px solid #131B23;
+    border-radius: 6px;
     height: 40px;
     margin: 1% 1%;
+    width: 15em;
 }
