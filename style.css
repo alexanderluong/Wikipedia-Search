@@ -14,5 +14,17 @@ input[type=text] {
     border-radius: 6px;
     height: 40px;
     margin: 1% 1%;
-    width: 15em;
+    animation-name: searchbox;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    padding: 10px 10px;
+}
+
+@keyframes searchbox {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 215px;
+    }
 }
