@@ -9,7 +9,7 @@ h1 {
     margin-top: 3%;
 }
 
-input[type=text] {
+input[type=search] {
     border: 2.5px solid #131B23;
     border-radius: 6px;
     height: 40px;
