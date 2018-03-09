@@ -15,10 +15,20 @@ input[type=search] {
     height: 40px;
     margin: 1% 1%;
     animation-name: searchbox;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     padding: 10px 10px;
 }
+
+#randomButton {
+    color: #131B23;
+}
+
+.tooltip>.tooltip-inner {
+    font-size: 11px;
+    padding: 4px;
+}
+
 
 @keyframes searchbox {
     from {
