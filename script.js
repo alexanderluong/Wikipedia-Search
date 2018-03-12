@@ -2,14 +2,21 @@ var articleName;
 
 $(document).ready(function() {
     // initialize tootltips
-    articleName = "example";
     $("#randomButton").tooltip({ delay: { show: 100 } });
     $("#searchButton").tooltip({ delay: { show: 100 } });
 
     $("#searchButton").on("click", function() {
-        console.log("ouch!");
-    })
-    getWikipediaData();
+        getTextFromSearch(getWikipediaData);
+    });
+
+    function getTextFromSearch(callback) {
+        articleName = $("#searchBox").val();
+        if (articleName == "") {
+            alert("You need to enter something!")
+        } else {
+            callback();
+        }
+    }
 
     function getWikipediaData() {
         $.ajax({

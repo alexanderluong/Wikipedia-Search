@@ -24,6 +24,10 @@ input[type=search] {
     color: #131B23;
 }
 
+.glyph:hover {
+    color: #3D444B;
+}
+
 .tooltip>.tooltip-inner {
     font-size: 11px;
     padding: 4px;
