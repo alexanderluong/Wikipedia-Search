@@ -1,6 +1,19 @@
 var articleName;
 
 $(document).ready(function() {
+    // disable form submit
+    // source: https://stackoverflow.com/questions/9347282/using-jquery-preventing-form-from-submitting
+    $("form").submit(function(e) {
+        e.preventDefault();
+    })
+
+    // source: https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
+    $(document).keypress(function(e) {
+        if (e.which == 13) {
+            getTextFromSearch(getWikipediaData);
+        }
+    });
+
     // initialize tootltips
     $("#randomButton").tooltip({ delay: { show: 100 } });
     $("#searchButton").tooltip({ delay: { show: 100 } });
@@ -10,6 +23,10 @@ $(document).ready(function() {
     });
 
     // $(".list-group").append("<p>Hello</p>")
+
+    // <a href="#" class="list-group-item list-group-item-action">
+    //                     <h3>Example article title</h3> Example text
+    //                 </a>
 
     function getTextFromSearch(callback) {
         articleName = $("#searchBox").val();
