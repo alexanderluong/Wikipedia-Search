@@ -9,6 +9,8 @@ $(document).ready(function() {
         getTextFromSearch(getWikipediaData);
     });
 
+    // $(".list-group").append("<p>Hello</p>")
+
     function getTextFromSearch(callback) {
         articleName = $("#searchBox").val();
         if (articleName == "") {
