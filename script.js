@@ -1,7 +1,7 @@
 var articleName;
 
 $(document).ready(function() {
-    // disable form submit
+    // disable form submit - so that enter doesn't refresh page
     // source: https://stackoverflow.com/questions/9347282/using-jquery-preventing-form-from-submitting
     $("form").submit(function(e) {
         e.preventDefault();
@@ -22,11 +22,13 @@ $(document).ready(function() {
         getTextFromSearch(getWikipediaData);
     });
 
-    // $(".list-group").append("<p>Hello</p>")
-
-    // <a href="#" class="list-group-item list-group-item-action">
-    //                     <h3>Example article title</h3> Example text
-    //                 </a>
+    function addWikiArticles(results) {
+        $(".list-group").empty();
+        for (i = 0; i < results[1].length; i++) {
+            $(".list-group").append("<a href=\"" + results[3][i] + "\" class=\"list-group-item list-group-item-action\">" +
+                "<h3>" + results[1][i] + "</h3>" + results[2][i] + "</a>");
+        }
+    }
 
     function getTextFromSearch(callback) {
         articleName = $("#searchBox").val();
@@ -52,6 +54,7 @@ $(document).ready(function() {
             })
             .done(function(data) {
                 console.log(data);
+                addWikiArticles(data);
             });
     }
 });
