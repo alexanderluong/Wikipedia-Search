@@ -53,7 +53,7 @@ $(document).ready(function() {
                 url: "https://en.wikipedia.org/w/api.php",
             })
             .done(function(data) {
-                console.log(data);
+                // console.log(data);
                 addWikiArticles(data);
             });
     }
